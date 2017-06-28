@@ -1,0 +1,20 @@
+.footer-nav {
+    ul {
+        @extend .clear-list;
+        li {
+            font-size: $footer-menu-links-font-size;
+            font-weight: $footer-menu-links-font-weight;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            a {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                display: block;
+                @include link-variant($footer-menu-links-color, $footer-menu-links-color-hover);
+                .tag {
+                    margin-left: rem-calc(8);
+                }
+            }
+        }
+    }
+}

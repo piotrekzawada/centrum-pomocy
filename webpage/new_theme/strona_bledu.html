@@ -1,0 +1,33 @@
+<section class="search-bar search-bar-with-background">
+    <div class="row">
+        <div class="search-form sm-12 md-10 md-offset-1 lg-8 lg-offset-2 columns">
+            {{search placeholder='Szukaj w Centrum Pomocy Shoplo'}}
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div class="error-page sm-12 md-12 lg-12 columns align-center">
+        <h1>{{t 'oops'}}</h1>
+
+        {{#is error 'not_found'}}
+        <h2>{{t 'nonexistent_page'}}</h2>
+        <p>{{t 'mistyped_address_or_moved_page'}}</p>
+        {{/is}}
+        {{#link 'help_center' class="btn btn-green btn-without-shadow"}}
+        {{t 'back_to_homepage'}}
+        {{/link}}
+    </div>
+</div>
+
+<section class="contact-support">
+    <div class="row">
+        <div class="sm-12 columns align-center">
+            <div class="contact-support-text">
+                <p>
+                    {{dc 'still_cant_find_what_youre_looking_for_v2'}} <a class="green-link" href="{{dc 'still_cant_find_what_youre_looking_for_href_v2'}}">{{dc 'contact_support_v2'}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

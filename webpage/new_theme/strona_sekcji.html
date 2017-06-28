@@ -1,0 +1,65 @@
+<section class="search-bar search-bar-with-background">
+    <div class="row">
+        <div class="search-form sm-12 md-10 md-offset-1 lg-8 lg-offset-2 columns">
+            {{search placeholder='Szukaj w Centrum Pomocy Shoplo'}}
+        </div>
+    </div>
+</section>
+
+{{#if section.articles}}
+<section class="articles-list">
+    <div class="row">
+        <header class="articles-header sm-12 md-12 lg-12 columns">
+            <h2>
+                {{section.name}}
+            </h2>
+        </header>
+        <div class="articles-navigation sm-12 md-3 lg-4 columns">
+            <div class="sticky-box">
+                <div class="nav-box">
+                <span class="label">
+		                {{section.name}}
+                </span>
+                    <ul class="nav">
+                        {{#each section.articles}}
+                        <li>
+                            <a href="#{{id}}">{{title}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="articles sm-12 md-9 lg-8 columns">
+            {{#each section.articles}}
+            <div id="{{id}}"class="single-article">
+                <h3>
+                    {{title}}
+                </h3>
+                <p>
+                    {{body}}
+                </p>
+            </div>
+            {{/each}}
+            {{pagination}}
+        </div>
+    </div>
+</section>
+{{else}}
+<i class="section-empty">
+    <a href="{{section.url}}">{{t 'empty'}}</a>
+</i>
+{{/if}}
+
+<section class="contact-support">
+    <div class="row">
+        <div class="sm-12 columns align-center">
+            <div class="contact-support-text">
+                <p>
+                    {{dc 'still_cant_find_what_youre_looking_for_v2'}} <a class="green-link" href="{{dc 'still_cant_find_what_youre_looking_for_href_v2'}}">{{dc 'contact_support_v2'}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

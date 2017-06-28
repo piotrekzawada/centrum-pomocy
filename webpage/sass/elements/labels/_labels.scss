@@ -1,0 +1,8 @@
+.tag {
+    @include button-size(2px, 8px, 12px, 1rem, 4px);
+    color: $color-white;
+    background: $color-red;
+    display: inline-block;
+    font-weight: 600;
+}
+

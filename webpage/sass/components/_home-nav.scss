@@ -1,0 +1,39 @@
+.home-nav{
+  margin-bottom: rem-calc(24);
+
+  .navigation-box{
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: rem-calc(35);
+
+    .label{
+      font-size: rem-calc(16);
+      font-weight: 600;
+      color: $color-black;
+      display: block;
+      margin-bottom: rem-calc(8);
+    }
+
+    ul{
+      margin: 0;
+      display: block;
+      width: 100%;
+      padding-left: rem-calc(17);
+
+      li{
+        float: left;
+        line-height: rem-calc(34);
+        width: 100%;
+
+        @include breakpoint(lg){
+          width:rem-calc(350);
+        }
+
+        a{
+          @extend .green-link;
+        }
+      }
+    }
+  }
+}

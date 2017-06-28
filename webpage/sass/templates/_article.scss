@@ -1,0 +1,163 @@
+.article{
+  margin-top: rem-calc(40);
+
+  margin-bottom: rem-calc(45);
+
+  @include breakpoint(lg){
+    margin-bottom: rem-calc(90);
+  }
+
+  .article-navigation{
+    position: relative;
+    
+    ul{
+      @extend .clear-list;
+
+      @include breakpoint(lg){
+        position: sticky;
+        top: rem-calc(90);
+      }
+
+      li{
+        line-height: rem-calc(34);
+
+        &.active{
+          > a{
+            font-weight: 600;
+          }
+
+          .submenu{
+            display: block;
+            .active{
+
+              a{
+                color: $color-green;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+
+      .submenu{
+        border-left: 1px solid $color-gray-lightest;
+        padding-left: rem-calc(20);
+        display: none;
+      }
+
+      a{
+        font-size: $font-size-small;
+        color: $color-silver;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .article-content{
+
+    h1,
+    h2,
+    h3,
+    p{
+      font-weight: 400;
+      line-height: rem-calc(34);
+      color: $color-black;
+    }
+
+    h1{
+      font-size: $font-size-x-large;
+    }
+
+    h2{
+      font-size: $font-size-large;
+    }
+
+    h3{
+      font-size: rem-calc(18);
+    }
+
+    p{
+      font-size: $font-size-base;
+    }
+
+    .label{
+      font-weight: 600;
+    }
+
+    ul{
+      margin: 0;
+      padding-left: rem-calc(20);
+
+      li{
+        line-height: rem-calc(34);
+      }
+    }
+
+    a{
+      @extend .green-link;
+    }
+
+    hr{
+      display: block;
+      height: rem-calc(1);
+      border: 0;
+      border-top: 1px solid $color-gray-lightest;
+      margin: rem-calc(30) 0;
+      padding: 0;
+    }
+
+    img{
+      border: 1px solid $color-gray-lightest;
+      border-radius: rem-calc(10);
+      max-width: 100%;
+    }
+  }
+
+  .article-pagination{
+    margin-top: rem-calc(45);
+
+    @include breakpoint(lg){
+      margin-top: rem-calc(90);
+    }
+
+    .pagination{
+      border-top: 1px solid $color-gray-lightest;
+      padding: rem-calc(40) 0;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      @include breakpoint(md){
+        text-align: left;
+        flex-direction: row;
+        margin-top: rem-calc(90);
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .align-right{
+        padding-top: rem-calc(20);
+        text-align: center;
+
+        @include breakpoint(md){
+          padding-top: 0;
+          text-align: right;
+        }
+      }
+    }
+
+    .label{
+      font-size: $font-size-xxx-small;
+      font-weight: 600;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    a{
+      font-size: $font-size-large;
+      color: $color-green;
+      text-decoration: none;
+    }
+  }
+}

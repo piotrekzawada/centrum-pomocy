@@ -1,0 +1,71 @@
+<section class="search-bar search-bar-with-background">
+    <div class="row">
+        <div class="search-form sm-12 md-10 md-offset-1 lg-8 lg-offset-2 columns">
+            {{search placeholder='Szukaj w Centrum Pomocy Shoplo'}}
+        </div>
+    </div>
+</section>
+<section class="article">
+    <div class="row">
+        <div class="article-navigation sm-12 md-4 lg-4 columns">
+            <ul class="nav">
+                {{dc 'nawigacja_na_stronie_artykulu'}}
+            </ul>
+        </div>
+        <div class="article-content sm-12 md-8 lg-8 columns">
+            <header class="article-header">
+                <h1>
+                    {{article.title}}
+                </h1>
+            </header>
+
+            <hr>
+            {{article.body}}
+        </div>
+        {{!--
+        <div class="article-pagination sm-12 md-12 lg-12 columns">
+            <div class="pagination flex-container">
+                <div class="prev sm-12 md-6 lg-6 ">
+                    <span class="label">
+                        Prev
+                    </span>
+                    <a href="" class="">
+                        Variants
+                    </a>
+                </div>
+                <div class="next sm-12 md-6 lg-6  align-right">
+                    <span class="label">
+                        Next
+                    </span>
+                    <a href="" class="">
+                        Online gift cards
+                    </a>
+                </div>
+            </div>
+        </div>
+        --}}
+
+    </div>
+</section>
+
+<section class="contact-support">
+    <div class="row">
+        <div class="sm-12 columns align-center">
+            <div class="contact-support-text">
+                <p>
+                    {{dc 'still_cant_find_what_youre_looking_for_v2'}} <a class="green-link" href="{{dc 'still_cant_find_what_youre_looking_for_href_v2'}}">{{dc 'contact_support_v2'}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    var	activeNav = '#'+'{{section.name}}';
+    activeNav.split(' ').join('_');
+    var activeNav = activeNav.toLowerCase();
+
+    $(activeNav).show();
+
+</script>

@@ -1,0 +1,31 @@
+.newsletter {
+  //margin-top: rem-calc(100);
+
+  header {
+    text-align: center;
+    h2 {
+      font-size: $font-size-large;
+      color: $color-black;
+      font-weight: 400;
+      margin-top: rem-calc(42);
+      margin-bottom: rem-calc(28);
+    }
+  }
+  .newsletter-form {
+    background: $color-white-dark;
+  }
+
+  small {
+    font-size: rem-calc(12);
+    color: $color-black;
+    text-align: center;
+    display: block;
+    margin-top: rem-calc(20);
+    margin-bottom: rem-calc(30);
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}

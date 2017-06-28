@@ -1,0 +1,72 @@
+// Settings
+$font-size-root: 16px;
+$font-family-base: 'galano';
+$line-height-base: 1.4;
+
+$global-width: rem-calc(1170) !default;
+$global-flexbox: true;
+$global-text-direction: ltr !default;
+// Internal variables used for text direction
+$global-left: if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);
+
+// 2. Breakpoints
+// --------------
+
+
+$breakpoints: (
+  sm: 0,
+  md: 640px,
+  lg: 1024px,
+  xlg: 1200px,
+  xxlg: 1440px,
+);
+$print-breakpoint: lg;
+$breakpoint-classes: (sm md lg xlg xxlg);
+
+// 3. The Grid
+// -----------
+
+// $grid-row-width: 'expand'; //defoult $global-width
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+  sm: 40px,
+  md: 30px,
+);
+$grid-column-align-edge: true;
+$grid-column-alias: 'columns';
+$block-grid-max: 8;
+
+// COLORS
+
+$color-black: #2C3238;
+$color-white: #FFF;
+$color-white-dark: #F7F7F7;
+$color-silver: #6F7982;
+$color-silver-medium: rgb(77, 92, 116);
+$color-silver-darker: #3B4249;
+$color-gray-dark: #363E45;
+$color-gray: #707070;
+$color-gray-light: #DDD;
+$color-gray-lighter: #EAEEF2;
+$color-gray-lightest: #D7D7D7;
+$color-purple: #6A5AFF;
+$color-purple-dark-one: #604DEF;
+$color-purple-dark: #5B4CEA;
+$color-purple-darker: #6759E8;
+$color-red: #FF4C6B;
+$color-red-dark: #DA3C57;
+$color-mint: #00FFBC;
+$color-yellow: #FFF800;
+$color-green: #00BB8A;
+
+// FONT SIZES
+$font-size-x-large: rem-calc(36);
+$font-size-large: rem-calc(24);
+$font-size-base: rem-calc(16);
+$font-size-small: rem-calc(14);
+
+$font-size-xx-small: rem-calc(13);
+$font-size-xxx-small: rem-calc(12);
+$font-size-xxxx-small: rem-calc(11);

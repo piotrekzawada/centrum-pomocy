@@ -1,0 +1,41 @@
+strong {
+    font-weight: 600;
+}
+
+.hero-pre-title {
+    font-size: $font-size-small;
+    font-weight: 600;
+     text-transform: uppercase;
+}
+
+.hero-header {
+    font-size: $font-size-x-large;
+    font-weight: 400;
+}
+
+.hero-sub-title {
+    font-size: $font-size-base;
+    font-weight: 400;
+    color: $color-silver;
+    line-height: rem-calc(16);
+    margin: rem-calc(10) 0 rem-calc(10);
+}
+
+.section-header {
+    font-size: $font-size-large;
+    font-weight: 400;
+}
+
+.section-content {
+    font-size: $font-size-base;
+}
+
+.heading-with-button{
+    p{
+        margin: rem-calc(10) 0;
+    }
+
+    .btn{
+        margin-top: rem-calc(24);
+    }
+}

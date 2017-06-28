@@ -1,0 +1,46 @@
+<section class="search-bar search-bar-with-background">
+    <div class="row">
+        <div class="search-form sm-12 md-10 md-offset-1 lg-8 lg-offset-2 columns">
+            {{search placeholder='Szukaj w Centrum Pomocy Shoplo'}}
+        </div>
+    </div>
+</section>
+
+<section class="search-result">
+    <div class="row">
+        <div class="sm-12 md-12 lg-12 columns">
+            <header class="result-header">
+                <h2>
+                    Wyniki dla zapytania <span class="query">{{query}}</span>{{#if results_count}}: {{results_count}}{{/if}}
+                </h2>
+            </header>
+        </div>
+
+        <div class="results sm-12 md-12 lg-12 columns">
+            {{#if results_count}}
+            {{#each article_results}}
+            <a href="{{url}}">
+                {{title}}
+            </a>
+            {{/each}}
+
+            {{pagination}}
+
+            {{else}}
+            <h3 class="align-center">Brak wyników</h3>
+            {{/if}}
+        </div>
+    </div>
+</section>
+
+<section class="contact-support">
+    <div class="row">
+        <div class="sm-12 columns align-center">
+            <div class="contact-support-text without-top-border">
+                <p>
+                    Still can’t find what you're looking for? <a class="green-link" href="">Contact Support</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

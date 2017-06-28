@@ -1,0 +1,20 @@
+.contact-support{
+
+  .contact-support-text{
+    border-top: 1px solid $color-gray-lightest;
+    font-size: $font-size-base;
+    color: $color-black;
+
+    p{
+      margin: rem-calc(35) 0;
+
+      @include breakpoint(lg){
+        margin: rem-calc(45) 0;
+      }
+    }
+  }
+
+  .without-top-border{
+    border-top: 0;
+  }
+}

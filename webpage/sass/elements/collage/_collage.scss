@@ -1,0 +1,103 @@
+.collage {
+    .columns {
+        position: relative;
+    }
+}
+
+.device-wrapper {
+    position: absolute;
+    .screen {
+        position: absolute; 
+        top: 0;
+        left: 50%;
+        @include transform(translateX(-50%));
+        // max-width: 100%;
+    }
+    &.macbook-wrapper {
+        .screen {
+            top: 6%;
+            @include breakpoint(lg) {
+                max-width: 100%;
+            }
+        }
+
+        max-width: 100%;
+        .device {
+            max-width: 100%;
+        }
+        .screen {
+            max-width: 72%;
+        }
+        
+        @include breakpoint(md) {
+            max-width: initial;
+            .device {
+                max-width: initial;
+            }
+            .screen {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &.ipad-wrapper {
+        .screen {
+            border: 1px solid #f3f3f3;
+            border-radius: 3px;
+            top: 5%;
+            left: 12.237%;
+            @include transform(translateX(0%));
+        }
+         max-width: 100%;
+        .device {
+            max-width: 100%;
+        }
+        .screen {
+            max-width: 72.466%;
+        }
+        @include breakpoint(md) {
+            max-width: initial;
+            .device {
+                max-width: initial;
+            }
+            .screen {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &.iphone-wrapper {
+        .screen {
+            top: 10%;
+        }
+        @include breakpoint(md ) {
+            max-width: 100%;
+            .device {
+                max-width: 100%;
+            }
+            .screen {
+                max-width: 72.466%;
+            }
+        }
+    }
+}
+
+
+.theme-collage{
+    position: relative;
+
+    @include breakpoint(lg){
+
+        &:before {
+            width: rem-calc(744);
+            height: rem-calc(744);
+            content: '';
+            display: block;
+            position: absolute;
+            background: url(../images/themes/theme-spot.svg) no-repeat center center;
+            z-index: -1;
+            top: - rem-calc(98);
+            right: - rem-calc(5);
+        }
+    }
+}

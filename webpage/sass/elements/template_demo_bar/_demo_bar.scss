@@ -1,0 +1,57 @@
+.page-template-demo{
+  height: 100vh;
+  overflow: hidden;
+
+  .demo-header{
+    margin-bottom: rem-calc(4);
+    box-shadow: 0 0 rem-calc(10) 0 rgba(0,0,0,0.2);
+
+    .button-row{
+      @extend .align-middle;
+
+      min-height: rem-calc(90);
+    }
+
+    .demo-preview{
+      @extend .flex-container;
+
+      a{
+        @extend .flex-container;
+        @extend .align-middle;
+
+        font-size: $font-size-xxx-small;
+        font-weight: 600;
+        color: $color-gray-lightest;
+        padding: 0 rem-calc(5);
+        text-transform: uppercase;
+
+
+        &.active{
+          color: $color-purple;
+        }
+
+        span{
+          padding: 0 rem-calc(10);
+        }
+        i{
+          font-size: rem-calc(32);
+        }
+      }
+    }
+  }
+
+  .demo-theme{
+    background-color: $color-white-dark;
+
+    .mobile{
+      width: rem-calc(480);
+      margin: auto;
+      position: relative;
+    }
+
+    iframe{
+      width: 100%;
+      height: calc(100vh - 90px);
+    }
+  }
+}

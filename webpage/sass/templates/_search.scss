@@ -1,0 +1,35 @@
+.search-result{
+
+  header{
+
+    h2{
+      font-weight: 400;
+      font-size: $font-size-x-large;
+      color: $color-black;
+      margin: 0;
+      padding-top: rem-calc(43);
+      padding-bottom: rem-calc(23);
+      border-bottom: rem-calc(1) solid $color-gray-lightest;
+
+      .query{
+        font-weight: 600;
+      }
+    }
+  }
+
+  .results{
+
+    > a{
+      color: $color-green;
+      font-size: rem-calc(18);
+      line-height: rem-calc(24);
+      display: block;
+      padding: rem-calc(30) 0;
+      border-bottom: rem-calc(1) solid $color-gray-lightest;
+
+      &:last-child{
+        border-bottom: 0;
+      }
+    }
+  }
+}

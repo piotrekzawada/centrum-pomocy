@@ -1,0 +1,50 @@
+<section class="search-bar search-bar-with-background">
+    <div class="row">
+        <div class="search-form sm-12 md-10 md-offset-1 lg-8 lg-offset-2 columns">
+            {{search placeholder='Szukaj w Centrum Pomocy Shoplo'}}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+{{#if category.sections}}
+<section class="articles-list">
+    <div class="row">
+        <div class="articles-navigation category-list sm-12 md-12 lg-12">
+            <div class="row">
+                {{#each sections}}
+                {{#if articles}}
+                <div class="nav-box sm-12 md-3 lg-3 columns">
+                  <span class="label">
+                      {{name}}
+                  </span>
+                    <ul class="nav">
+                        {{#each articles}}
+                        <li>
+                            <a href="{{url}}">{{title}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}
+
+<section class="contact-support">
+    <div class="row">
+        <div class="sm-12 columns align-center">
+            <div class="contact-support-text">
+                <p>
+                    {{dc 'still_cant_find_what_youre_looking_for_v2'}} <a class="green-link" href="{{dc 'still_cant_find_what_youre_looking_for_href_v2'}}">{{dc 'contact_support_v2'}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

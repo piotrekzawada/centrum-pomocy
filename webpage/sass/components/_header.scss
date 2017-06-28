@@ -1,0 +1,67 @@
+.page-header{
+    padding: rem-calc(30) 0;
+
+    @include breakpoint(lg){
+        position: fixed;
+        top: 0;
+        background-color: $color-white;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .logo{
+        padding-bottom: rem-calc(20);
+
+        @include breakpoint(md){
+            padding-bottom: 0;
+        }
+
+        a{
+            @extend .flex-container;
+            @extend .align-middle;
+
+            @include breakpoint(md){
+                justify-content: flex-start;
+            }
+
+            justify-content: center;
+            font-size: rem-calc(18);
+            color: $color-black;
+            position: relative;
+
+            img{
+                padding-right: rem-calc(18);
+            }
+
+            span{
+                padding: 0  rem-calc(20);
+                position: relative;
+
+                &:before{
+                    content: '';
+                    width: 0;
+                    height: rem-calc(50);
+                    position: absolute;
+                    border: 1px solid $color-gray-lightest;
+                    top: - rem-calc(10);
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .btn-group{
+        @extend .flex-container;
+        @extend .align-middle;
+        justify-content: center;
+
+        @include breakpoint(md){
+            justify-content: flex-end;
+        }
+
+
+        .btn-login-shoplo{
+            padding-right: rem-calc(28);
+        }
+    }
+}

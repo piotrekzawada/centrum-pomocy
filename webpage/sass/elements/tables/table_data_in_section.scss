@@ -1,0 +1,38 @@
+.table-data-in-section {
+    border-radius: 5px;
+    border-top: 2px solid $color-gray-light;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.1);
+    padding: rem-calc(30);
+    background: $color-white;
+    &.purple {
+        border-color: $color-purple;
+    }
+     &.red {
+        border-color: $color-red;
+    }
+    h3 {
+        color: $color-black;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0;
+    }
+    ul {
+        @extend .clear-list;
+        margin-top: rem-calc(10);
+        .indicator {
+            font-size: $font-size-large;
+            font-weight: 600;
+            color: $color-black;
+        }
+        font-size: $font-size-small;
+        color: $color-silver;
+        li {
+            border-bottom: 1px solid #d7d7d7;
+            padding: 8px 0;
+            &:last-child {
+                border: 0;
+            }
+        }
+    }
+}

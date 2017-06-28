@@ -1,0 +1,32 @@
+<section class="newsletter">
+    <div class="newsletter-form">
+        <header class="row">
+            <div class="sm-12">
+                <h2>{{dc 'wyprobuj_shoplo_za_darmo_v2'}}</h2>
+            </div>
+        </header>
+        <div class="row">
+            <div class="sm-12 md-8 lg-6 md-offset-2 lg-offset-3 columns">
+                <form action="http://store.shoplo.com/pl/register" method="get" class="form-inline">
+                    <div class="input-group">
+                        <fieldset id="fieldset_store" class="form-control-input-wrapper ">
+                            <i class="icon icon-email"></i>
+                            <div class="fieldset-content">
+                                <label for="store_name" class="floating-label">{{dc 'twoj_email_v2'}}<span>*</span></label>
+                                <input type="text" name="store_email" placeholder="{{dc 'twoj_email_v2'}}" required="" data-error-message="error message" data-error-placement="top" data-container="#fieldset_store" class="form-control">
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="btn btn-green btn-without-shadow">{{dc 'rozpocznij_test_v2'}}</button>
+                    </div>
+                </form>
+                <small>{{dc 'zalozenie_konta_oznacza_akceptacje_v2'}} <a href="{{dc 'regulaminu_href_v2'}}">{{dc 'regulaminu'}}</a> Shoplo.com.</small>
+
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="main-footer">
+    <div class="row">
+        {{dc 'stopka_v2'}}
+    </div>
+</footer>

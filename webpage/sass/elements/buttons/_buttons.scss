@@ -1,0 +1,296 @@
+
+
+.btn{
+  @include button-size($btn-vertical-padding, $btn-horizontal-padding, $btn-font-size, $btn-line-height, $btn-border-radius);
+  transition: all 0.25s ease-out;
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+
+.btn-large{
+  @include button-size($btn-vertical-padding-large, $btn-horizontal-padding-large, $btn-font-size-large, $btn-line-height, $btn-border-radius-large);
+  text-transform: uppercase;
+}
+
+.btn-small{
+  @include button-size($btn-vertical-padding-small, $btn-horizontal-padding-small, $font-size-small, $btn-line-height, $btn-border-radius);
+  &.btn-with-icon{
+    i{
+      font-size: $btn-small-icon-size;
+      padding-right: $btn-small-icon-space;
+    }
+  }
+}
+
+.btn-green{
+	@include button-variant(
+		$color-white, 
+		$color-green,
+		$color-green,
+		$color-white, 
+		$color-green,
+		$color-green,
+		$color-white, 
+		$color-green,
+		$color-green,
+		$btn-disabled-color,
+		$btn-disabled-background-color,
+		$btn-disabled-border-color,
+		$btn-green-shadow,
+		$btn-green-hover-shadow,
+		$btn-green-shadow,
+		null
+	);
+}
+
+.btn-red{
+	@include button-variant(
+		$color-white, 
+		$color-red, 
+		$color-red, 
+		$color-white, 
+		$color-red-dark,
+		$color-red-dark,
+		$color-white, 
+		$color-red, 
+		$color-red,
+		$btn-disabled-color,
+		$btn-disabled-background-color,
+		$btn-disabled-border-color,
+		$btn-red-shadow,
+		$btn-red-hover-shadow,
+		$btn-red-shadow, 
+		null
+	);
+}
+
+.green-link{
+	color: $color-green;
+	text-decoration: underline;
+
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+
+
+//.btn-white{
+//	@include button-variant(
+//		$color-purple,
+//		$color-white,
+//		$color-purple,
+//		$color-white,
+//		$color-purple-dark,
+//		$color-purple-dark,
+//		$color-white,
+//		$color-purple,
+//		$color-purple,
+//		$btn-disabled-color,
+//		$btn-disabled-background-color,
+//		$btn-disabled-border-color,
+//		$btn-white-shadow,
+//		$btn-white-hover-shadow,
+//		$btn-white-shadow,
+//		null
+//	);
+//}
+//
+//.btn-white-red{
+//	@include button-variant(
+//		$color-white,
+//		$color-red,
+//		$color-white,
+//		$color-white,
+//		$color-red-dark,
+//		$color-red-dark,
+//		$color-white,
+//		$color-red,
+//		$color-red,
+//		$btn-disabled-color,
+//		$btn-disabled-background-color,
+//		$btn-disabled-border-color,
+//		$btn-red-shadow,
+//		$btn-red-hover-shadow,
+//		$btn-red-shadow,
+//		null
+//	);
+//}
+//
+//.btn-white-gray{
+//	@include button-variant(
+//		$color-gray-lightest,
+//		$color-white,
+//		$color-gray-lightest,
+//		$color-white,
+//		$color-gray-lighter,
+//		$color-gray-lighter,
+//		$color-white,
+//		$color-gray-lightest,
+//		$color-gray-lightest,
+//		$btn-disabled-color,
+//		$btn-disabled-background-color,
+//		$btn-disabled-border-color,
+//		$btn-white-shadow,
+//		$btn-white-hover-shadow,
+//		$btn-white-shadow,
+//		null
+//	);
+//}
+//
+//.btn-white-purple{
+//	@include button-variant(
+//		$color-white,
+//		$color-purple,
+//		$color-white,
+//		$color-white,
+//		$color-purple-dark,
+//		$color-purple-dark,
+//		$color-white,
+//		$color-purple,
+//		$color-purple,
+//		$btn-disabled-color,
+//		$btn-disabled-background-color,
+//		$btn-disabled-border-color,
+//		$btn-purple-shadow,
+//		$btn-purple-hover-shadow,
+//		$btn-purple-shadow,
+//		null
+//	);
+//}
+//
+//.btn-gray{
+//	@include button-variant(
+//		$color-silver,
+//		$color-white-dark,
+//		$color-white-dark,
+//		$color-white,
+//		$color-black,
+//		$color-black,
+//		$color-white,
+//		$color-black,
+//		$color-black,
+//		$btn-disabled-color,
+//		$btn-disabled-background-color,
+//		$btn-disabled-border-color,
+//		$btn-purple-shadow,
+//		$btn-purple-hover-shadow,
+//		$btn-purple-shadow,
+//		null
+//	);
+//}
+
+.btn-with-icon {
+	i {
+		margin-right: rem-calc(8);
+		vertical-align: middle;
+		font-size: rem-calc(14);
+	}
+}
+
+.with-arrow {
+	i {
+		font-size: rem-calc(20);
+		vertical-align: sub;
+		margin-left: 5px;
+		position: relative;
+		top: 1px;
+	}
+}
+
+.btn-rounded-corners {
+	border-radius: rem-calc(4);
+}
+.btn-x-rounded-corners {
+	border-radius: rem-calc(5);
+}
+
+.btn-large-icon {
+	@include button-size(0, 0, rem-calc(30), rem-calc(30), 4px);
+	width: 60px;
+	min-width: 60px;
+	height: 60px;
+	box-shadow: none;
+	position: relative;
+	i {
+		
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+}
+
+.btn-x-large-icon {
+	@extend .btn-large-icon;
+	@include button-size(0, 0, rem-calc(30), rem-calc(30), 15px);
+	width: 70px;
+	height: 70px;
+}
+
+.btn-medium-icon {
+	@include button-size(0px, 0px, 20px, 28px, 4px);
+	width: 40px;
+	height: 40px;
+	box-shadow: none;
+	position: relative;
+	i {
+		font-size: rem-calc(20);
+		display: inline-block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.btn-white-gray-icon {
+	@include button-variant(
+		$color-white,
+		$color-white,
+		$color-gray-light,
+		$color-white,
+		$color-white,
+		$color-gray-light,
+		$color-white,
+		$color-white,
+		$color-gray-light,
+		$btn-disabled-color,
+		$btn-disabled-background-color,
+		$btn-disabled-border-color,
+		none,
+		none,
+		none, 
+		none
+	);
+}
+
+.btn-without-shadow {
+	box-shadow: none;
+	&:hover,
+	&:active,
+	&.active {
+		box-shadow: none;
+	}
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.btn-login-shoplo {
+	font-size: rem-calc(12);
+	font-weight: 600;
+	color: $color-black;
+}

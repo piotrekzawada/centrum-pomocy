@@ -1,0 +1,76 @@
+.main-footer {
+    margin-top: rem-calc(40);
+    padding-bottom: rem-calc(40);
+
+    h3 {
+        font-size: $font-size-xxx-small;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 10px 0 20px;
+
+        i {
+            font-size: rem-calc(14);
+            vertical-align: text-bottom;
+            color: $color-black;
+            margin-right: 10px;
+        }
+    }
+
+    .footer-address {
+        @extend .footer-nav;
+        ul {
+            p {
+                margin: 0;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                color: $color-gray;
+            }
+        }
+    }
+
+    .footer-note {
+        margin-top: rem-calc(90);
+        i {
+            font-size: rem-calc(30);
+        }
+        p {
+            font-size: $font-size-xxx-small;
+            color: #707070;
+            font-weight: 400;
+            a {
+                color: inherit;
+            }
+        }
+    }
+
+    .footer-switch {
+        justify-content: center;
+
+        label {
+            line-height: 30px;
+            font-size: rem-calc(12);
+            color: #707070;
+            margin-right: rem-calc(10);
+
+        }
+
+        .dropdown-menu.open{
+            width: 100%;
+            border-radius: rem-calc(6) !important;
+            margin: rem-calc(3) 0;
+
+            li{
+                line-height: rem-calc(24);
+            }
+
+            a{
+                color: $color-silver;
+                width: 100%;
+                outline: 0;
+            }
+        }
+    }
+}
+.powered-by-zendesk{
+    display: none;
+}
